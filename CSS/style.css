@@ -25,12 +25,9 @@
     /*jumbo var*/
     --jumbo-pagging:5% 30%;
     /*sections var*/
-    --even-section-bg-color: white;
-    --odd-section-bg-color:rgb(246, 246, 246);
-    
-    
-
-
+    --odd-section-bg-color: white;
+    --even-section-bg-color:rgb(246, 246, 246);
+    /*others var*/
     --end-page-titles-color:rgb(114, 137, 218);
     --footer-font-color:white;
     --href-text-decoration:none;
@@ -39,25 +36,28 @@
     border: 1px solid var(--debug) ;
 }
 .container{
-    display: block;
+    display: flex;
+    flex-direction: column;
     width:80%;
+    min-width: 500px;
     height: auto;
     margin: auto;
 }
 .flex-rev-row{
     display: flex;
-    align-items: center;
+    justify-content: start;
     flex-direction: row-reverse;
 }
 .flex-row{
     display: flex;
-    align-items: center;
+    justify-content: end;
     flex-direction: row;
 }
 .flex-col{
     display: flex;
-    align-items: center;
     flex-direction: column;
+    width:auto;
+    padding: 5px 5px;
 }
 a{
     text-decoration: var(--href-text-decoration);
@@ -147,5 +147,12 @@ main>div:nth-child(2n+1){
 }
 main>div:nth-child(2n){
     background-color: var(--even-section-bg-color);
+}
+.sections-settings{
+    padding: 5% 5%;
+}
+.section-images{
+    display: block;
+    width:50% ;
 }
 
