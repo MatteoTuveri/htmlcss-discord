@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+:root{
+    --header-bg-color: rgb(37, 94, 233);
+    --header-font-color:white;
+    --buttons-font-color: white;
+    --white-buttons-font-color: black;
+    --even-section-bg-color: white;
+    --odd-section-bg-color:rgb(246, 246, 246);
+    --login-button-color:white;
+    --download-button-color:white;
+    --browser-button-color:rgb(35, 39, 42);
+    --end-page-buttons-color:rgb(114, 137, 218);
+    --end-page-titles-color:rgb(114, 137, 218);
+    --footer-font-color:white;
+    --debug:none;
+    --nav-font-size: 0.7em;
+    --button-radius:25px;
+    --buttons-padding:5px 10px;
+    --href-text-decoration:none;
+}
+.debug{
+    border: 1px solid var(--debug) ;
+}
+#logo-navigation{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content:space-between;
+    padding: 10px 20px;
+    background-color: var(--header-bg-color);
+    min-width: 600px;
+}
+#logo{
+    width: auto;
+    height: 20px;
+}
+#nav-settings{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.nav-option{
+    display: block;
+    margin: auto 10px;
+    color: var(--header-font-color);
+    text-decoration: var(--href-text-decoration);
+    font-size: var(--nav-font-size);
+}
+#login-button{
+    background-color: var(--login-button-color);
+    color: var(--white-buttons-font-color);
+    padding: var(--buttons-padding);
+    border-radius: var(--button-radius);
+    font-size: var(--nav-font-size) ;
+    text-decoration: var(--href-text-decoration);
+}
