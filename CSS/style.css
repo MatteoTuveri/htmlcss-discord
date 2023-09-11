@@ -17,8 +17,8 @@
     --end-page-buttons-color:rgb(114, 137, 218);
     --end-page-titles-color:rgb(114, 137, 218);
     --footer-font-color:white;
-    --debug:none;
-    --nav-font-size: 0.7em;
+    --debug:black;
+    --nav-font-size: 0.5em;
     --button-radius:25px;
     --buttons-padding:5px 10px;
     --href-text-decoration:none;
@@ -30,19 +30,19 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content:space-between;
-    padding: 10px 20px;
+    justify-content:space-around;
+    padding: 10px 0;
     background-color: var(--header-bg-color);
     min-width: 600px;
 }
 #logo{
+    display: block;
     width: auto;
     height: 20px;
 }
 #nav-settings{
     display: flex;
-    align-items: center;
-    flex-direction: row;
+    flex-direction: row;  
 }
 .nav-option{
     display: block;
@@ -51,11 +51,4 @@
     text-decoration: var(--href-text-decoration);
     font-size: var(--nav-font-size);
 }
-#login-button{
-    background-color: var(--login-button-color);
-    color: var(--white-buttons-font-color);
-    padding: var(--buttons-padding);
-    border-radius: var(--button-radius);
-    font-size: var(--nav-font-size) ;
-    text-decoration: var(--href-text-decoration);
-}
+
