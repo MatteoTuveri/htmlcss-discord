@@ -5,35 +5,76 @@
     font-family: 'Noto Sans', sans-serif;
 }
 :root{
+    /*header var*/
     --header-bg-color: rgb(37, 94, 233);
     --header-font-color:white;
+    --header-padding:10px;
+    /*degug*/
+    --debug:black;
+    /*buttons var*/
     --buttons-font-color: white;
     --white-buttons-font-color: black;
-    --even-section-bg-color: white;
-    --odd-section-bg-color:rgb(246, 246, 246);
     --login-button-color:white;
     --download-button-color:white;
     --browser-button-color:rgb(35, 39, 42);
     --end-page-buttons-color:rgb(114, 137, 218);
-    --end-page-titles-color:rgb(114, 137, 218);
-    --footer-font-color:white;
-    --debug:black;
-    --nav-font-size: 0.5em;
     --button-radius:25px;
     --buttons-padding:5px 10px;
+    /*navigation var*/
+    --nav-font-size: 0.5em;
+    /*jumbo var*/
+    --jumbo-pagging:5% 30%;
+    /*sections var*/
+    --even-section-bg-color: white;
+    --odd-section-bg-color:rgb(246, 246, 246);
+    
+    
+
+
+    --end-page-titles-color:rgb(114, 137, 218);
+    --footer-font-color:white;
     --href-text-decoration:none;
 }
 .debug{
     border: 1px solid var(--debug) ;
+}
+.container{
+    display: block;
+    width:80%;
+    height: auto;
+    margin: auto;
+}
+.flex-rev-row{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.flex-row{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.flex-col{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+a{
+    text-decoration: var(--href-text-decoration);
+}
+.buttons-settings{
+    display: block;
+    padding: var(--buttons-padding);
+    border-radius: var(--button-radius);
+    font-weight: bold;
 }
 #logo-navigation{
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content:space-around;
-    padding: 10px 0;
+    padding: var(--header-padding);
     background-color: var(--header-bg-color);
-    min-width: 600px;
 }
 #logo{
     display: block;
@@ -48,7 +89,63 @@
     display: block;
     margin: auto 10px;
     color: var(--header-font-color);
-    text-decoration: var(--href-text-decoration);
     font-size: var(--nav-font-size);
+}
+#log-in{
+    background-color: var(--login-button-color);
+    color: var(--white-buttons-font-color);
+    font-size: var(--nav-font-size);
+}
+#jumbo{
+    width: 100%;
+    background-image: url(../Img/jumbo.png);
+    background-size: cover;
+    background-position: center;
+    padding: var(--jumbo-pagging);
+
+}
+#header-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    color: var(--header-font-color);
+}
+h2{
+    margin: 20px auto;
+}
+p{
+    font-weight: bold;
+    font-size: 0.5em;
+    margin: 10px auto;
+}
+#header-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#download{
+    background-color: var(--download-button-color);
+    color: var(--white-buttons-font-color);
+    margin: auto 10px;
+}
+#download>a{
+    color: var(--white-buttons-font-color);
+}
+#browser{
+    background-color: var(--browser-button-color);
+    margin: auto 10px;
+}
+#browser>a{
+    color: var(--buttons-font-color);
+}
+main{
+    width: 100%;
+}
+main>div:nth-child(2n+1){
+    background-color: var(--odd-section-bg-color);
+}
+main>div:nth-child(2n){
+    background-color: var(--even-section-bg-color);
 }
 
