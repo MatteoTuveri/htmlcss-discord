@@ -116,8 +116,11 @@ h2{
 }
 p{
     font-weight: bold;
-    font-size: 0.5em;
+    font-size: 0.8em;
     margin: 10px auto;
+}
+main>div:nth-last-of-type(1)>section>p{ /*select the last paragraph of the last section*/
+    text-align: center;
 }
 #header-buttons{
     display: flex;
