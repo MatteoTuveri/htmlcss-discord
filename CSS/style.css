@@ -10,7 +10,7 @@
     --header-font-color:white;
     --header-padding:10px;
     /*degug*/
-    --debug:none;
+    --debug:black;
     /*buttons var*/
     --buttons-font-color: white;
     --white-buttons-font-color: black;
@@ -30,6 +30,7 @@
     /*others var*/
     --end-page-titles-color:rgb(114, 137, 218);
     --footer-font-color:white;
+    --footer-bg-color:rgb(35, 39, 42);
     --href-text-decoration:none;
 }
 .debug{
@@ -152,6 +153,7 @@ main>div:nth-child(2n){
 }
 .sections-settings{
     padding: 5% 5%;
+    padding-bottom: 0;
 }
 .section-images{
     display: block;
@@ -171,4 +173,33 @@ main>div:nth-last-of-type(1)>section>p{ /*select the last paragraph of the last 
     background-repeat: no-repeat;
     text-align: center;
 }
+footer{
+    background-color: var(--footer-bg-color);
+    color: var(--footer-font-color);
+}
+#footer-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+#language-footer{
+    display: flex;
+    flex-direction: column;
+}
+#language-selection{
+    display: block;
+    border: none;
+    background: none;
+    color: var(--footer-font-color);
+    font-size: 1.5em;
 
+}
+h3{
+    font-size: 2em;
+}
+.flex-align{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2%;
+}
