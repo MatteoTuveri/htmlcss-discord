@@ -10,7 +10,7 @@
     --header-font-color:white;
     --header-padding:10px;
     /*degug*/
-    --debug:black;
+    --debug:none;
     /*buttons var*/
     --buttons-font-color: white;
     --white-buttons-font-color: black;
@@ -19,9 +19,9 @@
     --browser-button-color:rgb(35, 39, 42);
     --end-page-buttons-color:rgb(114, 137, 218);
     --button-radius:25px;
-    --buttons-padding:5px 10px;
+    --buttons-padding:10px 15px;
     /*navigation var*/
-    --nav-font-size: 0.5em;
+    --nav-font-size: 1.2em;
     /*jumbo var*/
     --jumbo-pagging:5% 30%;
     /*sections var*/
@@ -39,7 +39,8 @@
     display: flex;
     flex-direction: column;
     width:80%;
-    min-width: 500px;
+    min-width: 800px;
+    max-width: 1500px;
     height: auto;
     margin: auto;
 }
@@ -56,6 +57,7 @@
 .flex-col{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width:auto;
     padding: 5px 5px;
 }
@@ -79,7 +81,7 @@ a{
 #logo{
     display: block;
     width: auto;
-    height: 20px;
+    height: 80%;
 }
 #nav-settings{
     display: flex;
@@ -113,10 +115,10 @@ a{
 }
 h2{
     margin: 20px auto;
+    font-size: 2em;
 }
 p{
-    font-weight: bold;
-    font-size: 0.8em;
+    font-size: 1.5em;
     margin: 10px auto;
 }
 #header-buttons{
@@ -155,7 +157,18 @@ main>div:nth-child(2n){
     display: block;
     width:50% ;
 }
+main>div:nth-last-of-type(1)>img{
+    width: 90%;
+}
 main>div:nth-last-of-type(1)>section>p{ /*select the last paragraph of the last section*/
+    text-align: center;
+}
+#ending{
+    display: block;
+    width: 50%;
+    background-image: url(../Img/stars.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
     text-align: center;
 }
 
