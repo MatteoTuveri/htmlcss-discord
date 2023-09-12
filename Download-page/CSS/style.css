@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+:root {
+    --header-and-footer-bg: rgb(35, 39, 42);
+    --header-and-footer-buttons-color: rgb(121, 131, 245);
+    --main-buttons-color: rgb(49, 51, 56);
+    --debug: 1px solid black;
+    --header-and-footer-font-color: white;
+    --button-radius: 50px;
+    --buttons-padding: 10px 25px;
+}
+
+.debug {
+    border: var(--debug);
+}
+
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+}
+.align-center{
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 5px 10px;
+}
+.clear-text-color{
+    color: var(--header-and-footer-font-color);
+}
+.dark-text-color{
+    color: black;
+}
+.clear-button{
+    background-color: white;
+}
+
+.buttons-settings {
+    display: block;
+    padding: var(--buttons-padding);
+    border-radius: var(--button-radius);
+    margin: auto 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#nav-settings {
+    background-color: var(--header-and-footer-bg);
+    padding: 10px 15%;
+}
