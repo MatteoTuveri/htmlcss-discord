@@ -25,7 +25,7 @@
     --buttons-padding: 10px 25px;
     /*sections var*/
     --odd-section-bg-color: white;
-    --even-section-bg-color: rgb(246, 246, 246);
+    --even-section-bg-color: rgb(0, 0, 0,.05);
     /*others var*/
     --footer-titles-color: rgb(114, 137, 218);
     --footer-font-color: white;
@@ -159,12 +159,18 @@ h2 {
 }
 
 /*main settings*/
-main>div:nth-child(2n+1) {
-    background-color: var(--odd-section-bg-color);
+.even {
+    background-color: var(--even-section-bg-color);
 }
 
-main>div:nth-child(2n) {
-    background-color: var(--even-section-bg-color);
+.wave{
+    display: block;
+    width: 100%;
+    opacity: .05;
+}
+#rotate{
+    transform: rotate(180deg);
+    transform:scaleY(-1);
 }
 
 .section-text-width {
