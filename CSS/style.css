@@ -258,6 +258,9 @@ footer hr{
     display: flex;
     
 }
+footer>div>section:nth-child(1)>h3{
+    padding-bottom: 15px;
+}
 
 /*Hover settings*/
 a:hover{
