@@ -1,205 +1,161 @@
-*{
+/*browser size reset*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans', sans-serif;
 }
-:root{
+
+/*var list*/
+:root {
     /*header var*/
     --header-bg-color: rgb(37, 94, 233);
-    --header-font-color:white;
-    --header-padding:10px;
+    --header-font-color: white;
+    --header-padding: 10px;
     /*degug*/
-    --debug:black;
+    --debug: none;
     /*buttons var*/
-    --buttons-font-color: white;
-    --white-buttons-font-color: black;
-    --login-button-color:white;
-    --download-button-color:white;
-    --browser-button-color:rgb(35, 39, 42);
-    --end-page-buttons-color:rgb(114, 137, 218);
-    --button-radius:25px;
-    --buttons-padding:10px 15px;
-    /*navigation var*/
-    --nav-font-size: 1.2em;
-    /*jumbo var*/
-    --jumbo-pagging:5% 30%;
-    /*sections var*/
-    --odd-section-bg-color: white;
-    --even-section-bg-color:rgb(246, 246, 246);
-    /*others var*/
-    --end-page-titles-color:rgb(114, 137, 218);
-    --footer-font-color:white;
-    --footer-bg-color:rgb(35, 39, 42);
-    --href-text-decoration:none;
+    --dark-buttons-font-color: white;
+    --clear-buttons-font-color: black;
+    --login-button-color: white;
+    --download-button-color: white;
+    --browser-button-color: rgb(35, 39, 42);
+    --end-page-buttons-color: rgb(114, 137, 218);
+    --button-radius: 25px;
+    --buttons-padding: 15px 15px;
+     /*sections var*/
+     --odd-section-bg-color: white;
+     --even-section-bg-color:rgb(246, 246, 246);
+     /*others var*/
+     --end-page-titles-color:rgb(114, 137, 218);
+     --footer-font-color:white;
+     --footer-bg-color:rgb(35, 39, 42);
+     --href-text-decoration:none;
 }
-.debug{
-    border: 1px solid var(--debug) ;
+
+/*general settings*/
+
+.debug {
+    border: 1px solid var(--debug);
 }
-.container{
-    display: flex;
-    flex-direction: column;
-    width:80%;
-    min-width: 800px;
-    max-width: 1500px;
-    height: auto;
-    margin: auto;
+
+.container {
+    min-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15%;
 }
-.flex-rev-row{
-    display: flex;
-    justify-content: start;
-    flex-direction: row-reverse;
-}
-.flex-row{
-    display: flex;
-    justify-content: end;
-    flex-direction: row;
-}
-.flex-col{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width:auto;
-    padding: 5px 5px;
-}
-a{
-    text-decoration: var(--href-text-decoration);
-}
-.buttons-settings{
+
+.buttons-settings {
     display: block;
     padding: var(--buttons-padding);
     border-radius: var(--button-radius);
-    font-weight: bold;
+    margin: auto 20px;
 }
-#logo-navigation{
+
+.flex-row-center {
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
-    flex-direction: row;
-    justify-content:space-around;
-    padding: var(--header-padding);
-    background-color: var(--header-bg-color);
 }
-#logo{
-    display: block;
-    width: auto;
-    height: 80%;
-}
-#nav-settings{
+
+.flex-row-reverse-center {
     display: flex;
-    flex-direction: row;  
+    flex-flow: row-reverse wrap-reverse;
+    align-items: center;
 }
-.nav-option{
-    display: block;
-    margin: auto 10px;
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.no-wrap{
+    flex-wrap: nowrap;
+}
+
+.font-x2 {
+    font-size: 2em;
+}
+
+/*header settings*/
+header {
     color: var(--header-font-color);
-    font-size: var(--nav-font-size);
 }
-#log-in{
+
+#nav-settings {
+    justify-content: space-between;
+    background-color: var(--header-bg-color);
+    padding: 10px 5%;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--header-font-color);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 0 15px;
+}
+
+#log-in {
     background-color: var(--login-button-color);
-    color: var(--white-buttons-font-color);
-    font-size: var(--nav-font-size);
 }
-#jumbo{
-    width: 100%;
+
+.clear-button-font {
+    color: var(--clear-buttons-font-color);
+}
+
+#hero {
     background-image: url(../Img/jumbo.png);
     background-size: cover;
     background-position: center;
-    padding: var(--jumbo-pagging);
-
-}
-#header-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    padding: 5% 5%;
     text-align: center;
-    color: var(--header-font-color);
 }
-h2{
+
+h1, h2 {
+    font-size: 3em;
     margin: 20px auto;
-    font-size: 2em;
 }
-p{
-    font-size: 1.5em;
-    margin: 10px auto;
+
+#hero-p {
+    width: 40%;
+    min-width: 500px;
+    margin: 10px;
 }
-#header-buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-#download{
+
+#download-button {
     background-color: var(--download-button-color);
-    color: var(--white-buttons-font-color);
-    margin: auto 10px;
 }
-#download>a{
-    color: var(--white-buttons-font-color);
-}
-#browser{
+
+#browser-button {
     background-color: var(--browser-button-color);
-    margin: auto 10px;
 }
-#browser>a{
-    color: var(--buttons-font-color);
-}
-main{
-    width: 100%;
-}
+
+/*main settings*/
 main>div:nth-child(2n+1){
-    background-color: var(--odd-section-bg-color);
+    background-color: var(--odd-section-bg-color) ;
 }
 main>div:nth-child(2n){
-    background-color: var(--even-section-bg-color);
+    background-color: var(--even-section-bg-color) ;
 }
-.sections-settings{
-    padding: 5% 5%;
-    padding-bottom: 0;
+.section-text-width{
+    width: 40%;
 }
-.section-images{
-    display: block;
-    width:50% ;
+.img-width{
+    width: 60%;
 }
-main>div:nth-last-of-type(1)>img{
-    width: 90%;
+main img{
+    width: 100%;
 }
-main>div:nth-last-of-type(1)>section>p{ /*select the last paragraph of the last section*/
+#last-img-width{
+    width: 100%;
+}
+#last-section-text-width{
+    width: 100%;
     text-align: center;
-}
-#ending{
-    display: block;
-    width: 50%;
-    background-image: url(../Img/stars.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-align: center;
-}
-footer{
-    background-color: var(--footer-bg-color);
-    color: var(--footer-font-color);
-}
-#footer-flex{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-}
-#language-footer{
-    display: flex;
-    flex-direction: column;
-}
-#language-selection{
-    display: block;
-    border: none;
-    background: none;
-    color: var(--footer-font-color);
-    font-size: 1.5em;
-
-}
-h3{
-    font-size: 2em;
-}
-.flex-align{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 2%;
 }
