@@ -13,7 +13,7 @@
     --header-font-color: white;
     --header-padding: 10px;
     /*degug*/
-    --debug: black;
+    --debug: none;
     /*buttons var*/
     --dark-buttons-font-color: white;
     --clear-buttons-font-color: black;
@@ -251,4 +251,12 @@ footer hr{
 #fin-footer{
     display: flex;
     
+}
+
+/*Hover settings*/
+a:hover{
+    text-decoration: underline;
+}
+.buttons-settings:hover{
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
